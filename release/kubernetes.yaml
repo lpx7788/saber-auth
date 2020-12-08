@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mall-admin
+  labels:
+    app: mall-admin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mall-admin
+  template:
+    metadata:
+      labels:
+        app: mall-admin
+    spec:
+      containers:
+      - image: ${mall-admin-image}
+        name: mall-admin
+        imagePullPolicy: Always #三个选择Always、Never、IfNotPresent，每次启动时检查和更新（从registery）images的策略，
+      resources: #资源管理
+        requests: #容器运行时，最低资源需求，也就是说最少需要多少资源容器才能正常运行
+          cpu: 0.1 #CPU资源（核数），两种方式，浮点数或者是整数+m，0.1=100m，最少值为0.001核（1m）
+          memory: 32Mi #内存使用量
+        limits: #资源限制
+          cpu: 0.5
+          memory: 500Mi
+      ports:
+      - containerPort: 80 #容器开放对外的端口
+        name: mall-admin  #名称
+        protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: mall-admin
+spec:
+    selector:
+        app: mall-admin
+    type: NodePort
+    ports:
+    - protocol: TCP
+      nodePort: 31050  #服务访问端口 有效端口的范围是30000-32767
+      port: 9000   #服务访问端口
+      targetPort: 80  #容器端口

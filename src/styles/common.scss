@@ -1,0 +1,101 @@
+// 全局变量
+@import './variables.scss';
+@import './base.scss';
+// ele样式覆盖
+@import './element-ui.scss';
+// 顶部右侧显示
+@import './top.scss';
+// 导航标签
+@import './tags.scss';
+// 工具类函数
+@import './mixin.scss';
+// 侧面导航栏
+@import './sidebar.scss';
+// 动画
+@import './animate/vue-transition.scss';
+// 主题
+@import './theme/index.scss';
+// 适配
+@import './media.scss';
+// 通用配置
+@import './normalize.scss';
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+* {
+  outline: none;
+}
+
+body,
+html {
+  font-size: 13px;
+}
+
+// 滚动条样式
+@include scrollBar;
+
+.avue-crud__menu-none {
+
+  .avue-crud__menu {
+    display: none;
+  }
+}
+
+.avue-crud_head_menu {
+  width: 99%;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.avue-crud__menu .el-form .el-form-item__content {
+  display: inline-block;
+}
+
+.avue-crud__menu .datePicker,
+.avue-crud-search .datePicker {
+  display: inline-flex;
+
+  .el-range-editor--small.el-input__inner {
+    height: 32px;
+  }
+
+  .el-date-editor {
+    margin: 0 15px 10px;
+    width: 300px !important;
+  }
+}
+
+.avue-crud .avue-crud__search .searchInput {
+  width: 300px;
+  margin-left: 20px;
+}
+
+.success {
+  color: #67c23a;
+}
+
+.warning {
+  color: #e6a23c;
+}
+
+.danger {
+  color: #f56c6c;
+}
+
+.info {
+  color: #909399;
+}
+
+.primary {
+  color: #409eff;
+}
+
+// 超出隐藏
+.overHidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

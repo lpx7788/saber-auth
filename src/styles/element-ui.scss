@@ -1,0 +1,131 @@
+.el-dropdown-menu__item {
+  font-size: 12px !important;
+  line-height: 28px !important;
+}
+
+.el-scrollbar__view {
+  height: 100%;
+}
+
+.el-menu--horizontal {
+  border-bottom: none !important;
+}
+
+.el-menu {
+  border-right: none !important;
+}
+
+.el-menu--display,
+.el-menu--display+.el-submenu__icon-arrow {
+  display: none;
+}
+
+
+.el-message__icon,
+.el-message__content {
+  display: inline-block;
+}
+
+.el-date-editor .el-range-input,
+.el-date-editor .el-range-separator {
+  height: auto;
+  overflow: hidden;
+}
+
+.el-dialog__wrapper {
+  z-index: 2048;
+}
+
+.el-col {
+  margin-bottom: 8px;
+}
+
+.el-main {
+  padding: 0 !important;
+}
+
+.el-dropdown-menu__item--divided:before,
+.el-menu,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+  background-color: transparent;
+}
+
+
+.el-dropdown-menu__item--divided:before,
+.el-menu,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):focus,
+.el-menu--horizontal>.el-menu-item:not(.is-disabled):hover,
+.el-menu--horizontal>.el-submenu .el-submenu__title:hover {
+  background-color: transparent !important;
+}
+
+.el-card__header {
+  padding: 6px 18px !important;
+}
+
+.el-card__body {
+  padding: 26px !important;
+}
+
+.el-divider--horizontal {
+  margin: 12px 0 !important;
+}
+
+.el-tag+.el-tag {
+  margin-left: 10px;
+}
+
+.el-drawer__body {
+  overflow: auto;
+}
+
+.el-table {
+  font-size: 13px;
+}
+
+.el-tabs--border-card>.el-tabs__header {
+  background-color: #fafafa;
+}
+
+.el-tabs [class^="icon-"] {
+  font-family: "iconfont" !important;
+  font-size: 14px !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+.el-image {
+  border: 1px solid #EBEEF5;
+}
+
+.el-divider .el-link .el-link--inner {
+  cursor: auto;
+}
+
+.el-link.noCursor .el-link--inner {
+  cursor: auto;
+}
+
+.el-tabs .el-tabs__nav i {
+  font-size: 14px !important;
+}
+
+.el-input .el-input__suffix-inner i {
+  font-size: 13px !important;
+}
+
+.el-popper {
+  word-break: break-all !important;
+}
+
+.el-popover {
+  max-height: calc(100vh);
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.el-popover::-webkit-scrollbar {
+  display: none;
+}
